@@ -1,0 +1,9 @@
+RewriteEngine on
+
+Redirect 404 /\.git
+Redirect 404 /composer\.
+Redirect 404 /.bowerrc
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule  . index.php
